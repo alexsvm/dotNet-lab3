@@ -17,11 +17,18 @@ namespace dotNet_lab3
 
     public class Student
     {
-        public string FirsName;
+        public string FirstName;
         public string MiddleName;
         public string LastName;
         public string Address;
         public string Phone;
+        public Student(string firstName, string middleName, string lastName, string address, string phone) {
+            FirstName = firstName;
+            MiddleName = middleName;
+            LastName = lastName;
+            Address = address;
+            Phone = phone;
+        }
     }
 
     public class Course
@@ -38,7 +45,7 @@ namespace dotNet_lab3
         Dictionary<StudentCourse2, int> rating2;
         void ddd()
         {
-            Student st1 = new Student();
+            Student st1 = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
             Course c1 = new Course();
             rating.Add(new StudentCourse(st1, c1), 3);
         }
@@ -53,12 +60,14 @@ namespace dotNet_lab3
 
     static class Program
     {
-        static List<Student> students;
-        static List<Course> courses;
+        public static List<Student> students;
+        public static List<Course> courses;
 
         [STAThread]
         static void Main()
         {
+            students = new List<Student>();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
