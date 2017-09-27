@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace dotNet_lab3
 {
     using StudentCourse = Tuple<Student, Course>;
-    using StudentCourse2 = KeyValuePair<Student, Course>;
+    //using StudentCourse2 = KeyValuePair<Student, Course>;
 
     public class Student
     {
@@ -22,6 +22,12 @@ namespace dotNet_lab3
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
+        public string DisplayStr {
+            get {
+                return LastName + " " + FirstName + " " + MiddleName;
+            }
+            set { }
+        }
         public Student(string firstName, string middleName, string lastName, string address, string phone) {
             FirstName = firstName;
             MiddleName = middleName;
@@ -42,7 +48,7 @@ namespace dotNet_lab3
     public class StudyPlan
     {
         Dictionary<StudentCourse, int> rating;
-        Dictionary<StudentCourse2, int> rating2;
+        //Dictionary<StudentCourse2, int> rating2;
         void ddd()
         {
             Student st1 = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
@@ -70,7 +76,7 @@ namespace dotNet_lab3
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMain());
         }
     }
 }
