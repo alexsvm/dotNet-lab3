@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -40,9 +41,10 @@
             this.textBoxLN = new System.Windows.Forms.TextBox();
             this.textBoxMN = new System.Windows.Forms.TextBox();
             this.textBoxFN = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.listBoxStudents = new System.Windows.Forms.ListBox();
+            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,7 +60,7 @@
             this.groupBox1.Controls.Add(this.textBoxLN);
             this.groupBox1.Controls.Add(this.textBoxMN);
             this.groupBox1.Controls.Add(this.textBoxFN);
-            this.groupBox1.Location = new System.Drawing.Point(54, 30);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(343, 366);
             this.groupBox1.TabIndex = 3;
@@ -158,25 +160,17 @@
             this.textBoxFN.Size = new System.Drawing.Size(141, 20);
             this.textBoxFN.TabIndex = 3;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(90, 496);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
             // listBoxStudents
             // 
             this.listBoxStudents.FormattingEnabled = true;
-            this.listBoxStudents.Items.AddRange(new object[] {
-            "sdfsdf",
-            "sdfsdf",
-            "sdfsdf",
-            "sdfsdf"});
-            this.listBoxStudents.Location = new System.Drawing.Point(428, 30);
+            this.listBoxStudents.Location = new System.Drawing.Point(361, 12);
             this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(378, 355);
+            this.listBoxStudents.Size = new System.Drawing.Size(378, 368);
             this.listBoxStudents.TabIndex = 5;
+            // 
+            // programBindingSource
+            // 
+            this.programBindingSource.DataSource = typeof(dotNet_lab3.Program);
             // 
             // Form1
             // 
@@ -184,13 +178,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 604);
             this.Controls.Add(this.listBoxStudents);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,12 +198,12 @@
         private System.Windows.Forms.TextBox textBoxLN;
         private System.Windows.Forms.TextBox textBoxMN;
         private System.Windows.Forms.TextBox textBoxFN;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPhone;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxAddr;
         private System.Windows.Forms.ListBox listBoxStudents;
+        private System.Windows.Forms.BindingSource programBindingSource;
     }
 }
 

@@ -17,11 +17,11 @@ namespace dotNet_lab3
 
     public class Student
     {
-        public string FirstName;
-        public string MiddleName;
-        public string LastName;
-        public string Address;
-        public string Phone;
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public string LastName { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
         public Student(string firstName, string middleName, string lastName, string address, string phone) {
             FirstName = firstName;
             MiddleName = middleName;
