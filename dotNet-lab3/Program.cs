@@ -64,13 +64,11 @@ namespace dotNet_lab3
 
     public class StudyPlan
     {
-        Dictionary<StudentCourse, int> rating;
+        public Dictionary<StudentCourse, int> rating { get; set; }
         //Dictionary<StudentCourse2, int> rating2;
-        void ddd()
+       public StudyPlan()
         {
-            Student st1 = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
-            Course c1 = new Course("Информатика", 9, 3, 2);
-            rating.Add(new StudentCourse(st1, c1), 3);
+            rating = new Dictionary<StudentCourse, int>();
         }
     }
 
@@ -85,14 +83,20 @@ namespace dotNet_lab3
     {
         public static List<Student> students;
         public static List<Course> courses;
+        public static StudyPlan studyPlan;
 
         [STAThread]
         static void Main()
         {
             students = new List<Student>();
             courses = new List<Course>();
-            students.Add(new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322"));
-            courses.Add(new Course("Информатика", 9, 3, 2));
+            studyPlan = new StudyPlan();
+
+            Student S = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
+            students.Add(S);
+            Course C = new Course("Информатика", 9, 3, 2);
+            courses.Add(C);
+            studyPlan.rating.Add(new StudentCourse(S, C), 5);
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

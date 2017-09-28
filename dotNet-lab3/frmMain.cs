@@ -41,6 +41,12 @@ namespace dotNet_lab3
             listBoxCourses.Refresh();
         }
 
+        private void GetStudentCourseInfo(Student student, Course course)
+        {
+            //if (Program.studyPlan.rating.Contains(new dotNet_lab3.StudentCourse(student, course));
+            (Program.studyPlan.rating.ContainsKey(new StudentCourse(student, course))
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Program.students.Add(new Student(textBoxFN.Text, textBoxMN.Text, textBoxLN.Text, textBoxAddr.Text, maskedTextBoxPhone.Text));
@@ -50,9 +56,12 @@ namespace dotNet_lab3
         private void listBoxStudents_SelectedIndexChanged(object sender, EventArgs e)
         {
             Student SelectedStudent = (Student)listBoxStudents.SelectedItem;
+            Course SelectedCourse = (Course)listBoxCourses.SelectedItem;
             if (SelectedStudent != null) {
                 lblStudentInfo.Text = SelectedStudent.FirstName.Substring(0, 1) + ". " + SelectedStudent.MiddleName.Substring(0,1) + 
                     ". " + SelectedStudent.LastName + " (" + SelectedStudent.Address + ")";
+                if (SelectedCourse != null)
+                    GetStudentCourseInfo(SelectedStudent, SelectedCourse);
             }
         }
 
@@ -64,12 +73,11 @@ namespace dotNet_lab3
 
         private void listBoxCourses_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //Course SelectedCourse = (Course)listBoxCourses.SelectedItem;
-            //if (SelectedCourse != null)
-            //{
-            //    lblStudentInfo.Text = SelectedCourse.FirstName.Substring(0, 1) + ". " + SelectedCourse.MiddleName.Substring(0, 1) +
-            //        ". " + SelectedCourse.LastName + " (" + SelectedCourse.Address + ")";
-            //}
+            Course SelectedCourse = (Course)listBoxCourses.SelectedItem;
+            Student SelectedStudent = (Student)listBoxStudents.SelectedItem;
+            if (SelectedCourse != null && SelectedStudent != null)
+                GetStudentCourseInfo(SelectedStudent, SelectedCourse);
+
         }
     }
 }
