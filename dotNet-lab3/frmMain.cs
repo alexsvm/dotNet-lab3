@@ -17,22 +17,28 @@ namespace dotNet_lab3
             InitializeComponent();
 
             listBoxStudents.DataSource = Program.students;
-            listBoxStudents.DisplayMember = "lastName";
+            listBoxStudents.DisplayMember = "DisplayStr";
             //listBoxStudents.ValueMember = "Id";
+            listBoxCourses.DataSource = Program.courses;
+            listBoxCourses.DisplayMember = "DisplayStr";
         }
 
         private void GetStudentList()
         {
-            //listBoxStudents.Items.Clear();
-            //foreach (Student st in Program.students)
-            //{
-            //    listBoxStudents.Items.Add(st.LastName + " " + st.MiddleName + " " + st.FirstName);
-            //}
             listBoxStudents.DataSource = null;
             listBoxStudents.DataSource = (Program.students.Count > 0) ? new BindingSource(Program.students, null) : null;
             listBoxStudents.DisplayMember = "DisplayStr";
             //listBoxStudents.ValueMember = "Id";
             listBoxStudents.Refresh();
+        }
+
+        private void GetCoursesList()
+        {
+            listBoxCourses.DataSource = null;
+            listBoxCourses.DataSource = (Program.courses.Count > 0) ? new BindingSource(Program.courses, null) : null;
+            listBoxCourses.DisplayMember = "DisplayStr";
+            //listBoxCourses.ValueMember = "Id";
+            listBoxCourses.Refresh();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,9 +51,25 @@ namespace dotNet_lab3
         {
             Student SelectedStudent = (Student)listBoxStudents.SelectedItem;
             if (SelectedStudent != null) {
-                lblStudentInfo.Text = SelectedStudent.FirstName.Substring(1, 1) + ". " + SelectedStudent.MiddleName.Substring(1,1) + 
+                lblStudentInfo.Text = SelectedStudent.FirstName.Substring(0, 1) + ". " + SelectedStudent.MiddleName.Substring(0,1) + 
                     ". " + SelectedStudent.LastName + " (" + SelectedStudent.Address + ")";
             }
+        }
+
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            Program.courses.Add(new Course(textBoxCourseName.Text, (int)edCourseLCount.Value, (int)edCoursePCount.Value, (int)edCourseLabCount.Value));
+            GetCoursesList();
+        }
+
+        private void listBoxCourses_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Course SelectedCourse = (Course)listBoxCourses.SelectedItem;
+            //if (SelectedCourse != null)
+            //{
+            //    lblStudentInfo.Text = SelectedCourse.FirstName.Substring(0, 1) + ". " + SelectedCourse.MiddleName.Substring(0, 1) +
+            //        ". " + SelectedCourse.LastName + " (" + SelectedCourse.Address + ")";
+            //}
         }
     }
 }

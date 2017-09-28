@@ -22,13 +22,15 @@ namespace dotNet_lab3
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public string DisplayStr {
+        public string DisplayStr
+        {
             get {
                 return LastName + " " + FirstName + " " + MiddleName;
             }
             set { }
         }
-        public Student(string firstName, string middleName, string lastName, string address, string phone) {
+        public Student(string firstName, string middleName, string lastName, string address, string phone)
+        {
             FirstName = firstName;
             MiddleName = middleName;
             LastName = lastName;
@@ -39,10 +41,25 @@ namespace dotNet_lab3
 
     public class Course
     {
-        public string Name;
-        public int LecturesCount;
-        public int PracticalCount;
-        public int LaborCount;
+        public string Name { get; set; }
+        public int LecturesCount { get; set; }
+        public int PracticalCount { get; set; }
+        public int LaborCount { get; set; }
+        public Course(string name, int lecturesCount, int practicalCount, int laborCount)
+        {
+            Name = name;
+            LecturesCount = lecturesCount;
+            PracticalCount = practicalCount;
+            LaborCount = laborCount;
+        }
+        public string DisplayStr
+        {
+            get
+            {
+                return Name + " (" + LecturesCount + ", " + PracticalCount + ", " + LaborCount + ")";
+            }
+            set { }
+        }
     }
 
     public class StudyPlan
@@ -52,7 +69,7 @@ namespace dotNet_lab3
         void ddd()
         {
             Student st1 = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
-            Course c1 = new Course();
+            Course c1 = new Course("Информатика", 9, 3, 2);
             rating.Add(new StudentCourse(st1, c1), 3);
         }
     }
@@ -73,6 +90,9 @@ namespace dotNet_lab3
         static void Main()
         {
             students = new List<Student>();
+            courses = new List<Course>();
+            students.Add(new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322"));
+            courses.Add(new Course("Информатика", 9, 3, 2));
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

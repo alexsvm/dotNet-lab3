@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.maskedTextBoxPhone = new System.Windows.Forms.MaskedTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -37,38 +36,51 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
             this.textBoxLN = new System.Windows.Forms.TextBox();
             this.textBoxMN = new System.Windows.Forms.TextBox();
             this.textBoxFN = new System.Windows.Forms.TextBox();
             this.listBoxStudents = new System.Windows.Forms.ListBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.lblStudentInfo = new System.Windows.Forms.Label();
-            this.programBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.listBoxCourses = new System.Windows.Forms.ListBox();
+            this.btnAddCourse = new System.Windows.Forms.Button();
+            this.textBoxCourseName = new System.Windows.Forms.TextBox();
+            this.edCourseLCount = new System.Windows.Forms.NumericUpDown();
+            this.edCoursePCount = new System.Windows.Forms.NumericUpDown();
+            this.edCourseLabCount = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edCourseLCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edCoursePCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edCourseLabCount)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblStudentInfo);
             this.groupBox1.Controls.Add(this.maskedTextBoxPhone);
+            this.groupBox1.Controls.Add(this.listBoxStudents);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.textBoxAddr);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.btnAddStudent);
             this.groupBox1.Controls.Add(this.textBoxLN);
             this.groupBox1.Controls.Add(this.textBoxMN);
             this.groupBox1.Controls.Add(this.textBoxFN);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(343, 274);
+            this.groupBox1.Size = new System.Drawing.Size(757, 274);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Студент";
+            this.groupBox1.Text = "Студенты";
             // 
             // maskedTextBoxPhone
             // 
@@ -98,11 +110,9 @@
             // 
             // textBoxAddr
             // 
-            this.textBoxAddr.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxAddr.Location = new System.Drawing.Point(9, 149);
             this.textBoxAddr.Name = "textBoxAddr";
-            this.textBoxAddr.Size = new System.Drawing.Size(267, 20);
+            this.textBoxAddr.Size = new System.Drawing.Size(257, 20);
             this.textBoxAddr.TabIndex = 10;
             // 
             // label3
@@ -132,15 +142,15 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Имя:";
             // 
-            // button1
+            // btnAddStudent
             // 
-            this.button1.Location = new System.Drawing.Point(9, 237);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddStudent.Location = new System.Drawing.Point(9, 237);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(114, 23);
+            this.btnAddStudent.TabIndex = 6;
+            this.btnAddStudent.Text = "Добавить";
+            this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxLN
             // 
@@ -172,35 +182,124 @@
             this.listBoxStudents.Items.AddRange(new object[] {
             "",
             ""});
-            this.listBoxStudents.Location = new System.Drawing.Point(6, 19);
+            this.listBoxStudents.Location = new System.Drawing.Point(303, 19);
             this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(337, 199);
+            this.listBoxStudents.Size = new System.Drawing.Size(448, 199);
             this.listBoxStudents.TabIndex = 5;
             this.listBoxStudents.SelectedIndexChanged += new System.EventHandler(this.listBoxStudents_SelectedIndexChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.lblStudentInfo);
-            this.groupBox2.Controls.Add(this.listBoxStudents);
-            this.groupBox2.Location = new System.Drawing.Point(361, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(349, 274);
-            this.groupBox2.TabIndex = 6;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Студенты";
             // 
             // lblStudentInfo
             // 
             this.lblStudentInfo.AutoSize = true;
-            this.lblStudentInfo.Location = new System.Drawing.Point(6, 221);
+            this.lblStudentInfo.Location = new System.Drawing.Point(300, 237);
             this.lblStudentInfo.Name = "lblStudentInfo";
             this.lblStudentInfo.Size = new System.Drawing.Size(31, 13);
             this.lblStudentInfo.TabIndex = 6;
             this.lblStudentInfo.Text = "        ";
             // 
-            // programBindingSource
+            // groupBox2
             // 
-            this.programBindingSource.DataSource = typeof(dotNet_lab3.Program);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.edCourseLabCount);
+            this.groupBox2.Controls.Add(this.edCoursePCount);
+            this.groupBox2.Controls.Add(this.edCourseLCount);
+            this.groupBox2.Controls.Add(this.textBoxCourseName);
+            this.groupBox2.Controls.Add(this.btnAddCourse);
+            this.groupBox2.Controls.Add(this.listBoxCourses);
+            this.groupBox2.Location = new System.Drawing.Point(12, 292);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(757, 229);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Предметы";
+            // 
+            // listBoxCourses
+            // 
+            this.listBoxCourses.FormattingEnabled = true;
+            this.listBoxCourses.Items.AddRange(new object[] {
+            " "});
+            this.listBoxCourses.Location = new System.Drawing.Point(303, 19);
+            this.listBoxCourses.Name = "listBoxCourses";
+            this.listBoxCourses.Size = new System.Drawing.Size(448, 186);
+            this.listBoxCourses.TabIndex = 0;
+            this.listBoxCourses.SelectedIndexChanged += new System.EventHandler(this.listBoxCourses_SelectedIndexChanged);
+            // 
+            // btnAddCourse
+            // 
+            this.btnAddCourse.Location = new System.Drawing.Point(11, 181);
+            this.btnAddCourse.Name = "btnAddCourse";
+            this.btnAddCourse.Size = new System.Drawing.Size(112, 23);
+            this.btnAddCourse.TabIndex = 1;
+            this.btnAddCourse.Text = "Добавить";
+            this.btnAddCourse.UseVisualStyleBackColor = true;
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
+            // 
+            // textBoxCourseName
+            // 
+            this.textBoxCourseName.Location = new System.Drawing.Point(11, 35);
+            this.textBoxCourseName.Name = "textBoxCourseName";
+            this.textBoxCourseName.Size = new System.Drawing.Size(257, 20);
+            this.textBoxCourseName.TabIndex = 2;
+            // 
+            // edCourseLCount
+            // 
+            this.edCourseLCount.Location = new System.Drawing.Point(139, 64);
+            this.edCourseLCount.Name = "edCourseLCount";
+            this.edCourseLCount.Size = new System.Drawing.Size(56, 20);
+            this.edCourseLCount.TabIndex = 3;
+            // 
+            // edCoursePCount
+            // 
+            this.edCoursePCount.Location = new System.Drawing.Point(139, 97);
+            this.edCoursePCount.Name = "edCoursePCount";
+            this.edCoursePCount.Size = new System.Drawing.Size(56, 20);
+            this.edCoursePCount.TabIndex = 4;
+            // 
+            // edCourseLabCount
+            // 
+            this.edCourseLabCount.Location = new System.Drawing.Point(139, 132);
+            this.edCourseLabCount.Name = "edCourseLabCount";
+            this.edCourseLabCount.Size = new System.Drawing.Size(56, 20);
+            this.edCourseLabCount.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Наименование курса:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(8, 66);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Лекций:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 99);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(125, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Практических занятий:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(8, 134);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(128, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Лабораторных занятий:";
             // 
             // frmMain
             // 
@@ -216,7 +315,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.programBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edCourseLCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edCoursePCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.edCourseLabCount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -226,7 +327,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.TextBox textBoxLN;
         private System.Windows.Forms.TextBox textBoxMN;
         private System.Windows.Forms.TextBox textBoxFN;
@@ -235,9 +336,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxAddr;
         private System.Windows.Forms.ListBox listBoxStudents;
-        private System.Windows.Forms.BindingSource programBindingSource;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label lblStudentInfo;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnAddCourse;
+        private System.Windows.Forms.ListBox listBoxCourses;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown edCourseLabCount;
+        private System.Windows.Forms.NumericUpDown edCoursePCount;
+        private System.Windows.Forms.NumericUpDown edCourseLCount;
+        private System.Windows.Forms.TextBox textBoxCourseName;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
 
