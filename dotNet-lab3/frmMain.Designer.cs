@@ -53,6 +53,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblStudentRatingInfo = new System.Windows.Forms.Label();
+            this.edStudentCourseRating = new System.Windows.Forms.TextBox();
+            this.btnSaveStudentRating = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.edCourseLCount)).BeginInit();
@@ -301,11 +304,40 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Лабораторных занятий:";
             // 
+            // lblStudentRatingInfo
+            // 
+            this.lblStudentRatingInfo.AutoSize = true;
+            this.lblStudentRatingInfo.Location = new System.Drawing.Point(27, 540);
+            this.lblStudentRatingInfo.Name = "lblStudentRatingInfo";
+            this.lblStudentRatingInfo.Size = new System.Drawing.Size(194, 13);
+            this.lblStudentRatingInfo.TabIndex = 5;
+            this.lblStudentRatingInfo.Text = "              asdasdasdasdasd                    ";
+            // 
+            // edStudentCourseRating
+            // 
+            this.edStudentCourseRating.Location = new System.Drawing.Point(30, 556);
+            this.edStudentCourseRating.Name = "edStudentCourseRating";
+            this.edStudentCourseRating.Size = new System.Drawing.Size(132, 20);
+            this.edStudentCourseRating.TabIndex = 6;
+            // 
+            // btnSaveStudentRating
+            // 
+            this.btnSaveStudentRating.Location = new System.Drawing.Point(30, 593);
+            this.btnSaveStudentRating.Name = "btnSaveStudentRating";
+            this.btnSaveStudentRating.Size = new System.Drawing.Size(132, 23);
+            this.btnSaveStudentRating.TabIndex = 7;
+            this.btnSaveStudentRating.Text = "Сохранить";
+            this.btnSaveStudentRating.UseVisualStyleBackColor = true;
+            this.btnSaveStudentRating.Click += new System.EventHandler(this.btnSaveStudentRating_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 604);
+            this.ClientSize = new System.Drawing.Size(820, 639);
+            this.Controls.Add(this.btnSaveStudentRating);
+            this.Controls.Add(this.edStudentCourseRating);
+            this.Controls.Add(this.lblStudentRatingInfo);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmMain";
@@ -319,6 +351,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.edCoursePCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.edCourseLabCount)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -348,6 +381,9 @@
         private System.Windows.Forms.TextBox textBoxCourseName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblStudentRatingInfo;
+        private System.Windows.Forms.TextBox edStudentCourseRating;
+        private System.Windows.Forms.Button btnSaveStudentRating;
     }
 }
 

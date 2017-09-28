@@ -12,8 +12,6 @@ using System.Windows.Forms;
 
 namespace dotNet_lab3
 {
-    using StudentCourse = Tuple<Student, Course>;
-    //using StudentCourse2 = KeyValuePair<Student, Course>;
 
     public class Student
     {
@@ -22,20 +20,21 @@ namespace dotNet_lab3
         public string LastName { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public string DisplayStr
-        {
+        public string DisplayStr {
             get {
                 return LastName + " " + FirstName + " " + MiddleName;
             }
             set { }
         }
-        public Student(string firstName, string middleName, string lastName, string address, string phone)
-        {
+        public Dictionary<Course, int> CourseRating;
+
+        public Student(string firstName, string middleName, string lastName, string address, string phone) {
             FirstName = firstName;
             MiddleName = middleName;
             LastName = lastName;
             Address = address;
             Phone = phone;
+            CourseRating = new Dictionary<Course, int>();
         }
     }
 
@@ -62,16 +61,6 @@ namespace dotNet_lab3
         }
     }
 
-    public class StudyPlan
-    {
-        public Dictionary<StudentCourse, int> rating { get; set; }
-        //Dictionary<StudentCourse2, int> rating2;
-       public StudyPlan()
-        {
-            rating = new Dictionary<StudentCourse, int>();
-        }
-    }
-
     public class StudyElective
     {
 
@@ -83,21 +72,21 @@ namespace dotNet_lab3
     {
         public static List<Student> students;
         public static List<Course> courses;
-        public static StudyPlan studyPlan;
+ 
 
         [STAThread]
         static void Main()
         {
             students = new List<Student>();
             courses = new List<Course>();
-            studyPlan = new StudyPlan();
 
-            Student S = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
-            students.Add(S);
             Course C = new Course("Информатика", 9, 3, 2);
             courses.Add(C);
-            studyPlan.rating.Add(new StudentCourse(S, C), 5);
-
+            Student S = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
+            S.CourseRating[C] = 3;
+            students.Add(S);
+            
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());

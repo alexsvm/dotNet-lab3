@@ -43,8 +43,13 @@ namespace dotNet_lab3
 
         private void GetStudentCourseInfo(Student student, Course course)
         {
-            //if (Program.studyPlan.rating.Contains(new dotNet_lab3.StudentCourse(student, course));
-            (Program.studyPlan.rating.ContainsKey(new StudentCourse(student, course))
+            lblStudentRatingInfo.Text = "Оценка студента (" + student.DisplayStr + ") по курсу \"" + course.DisplayStr + "\":";
+            if (student.CourseRating.ContainsKey(course))
+            {
+                edStudentCourseRating.Text = student.CourseRating[course].ToString();
+            }
+            else
+                edStudentCourseRating.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -78,6 +83,15 @@ namespace dotNet_lab3
             if (SelectedCourse != null && SelectedStudent != null)
                 GetStudentCourseInfo(SelectedStudent, SelectedCourse);
 
+        }
+
+        private void btnSaveStudentRating_Click(object sender, EventArgs e)
+        {
+            Course SelectedCourse = (Course)listBoxCourses.SelectedItem;
+            Student SelectedStudent = (Student)listBoxStudents.SelectedItem;
+            int? vRating = Convert.ToInt16(edStudentCourseRating.Text);
+            if (vRating != null && SelectedCourse != null && SelectedStudent != null)
+                SelectedStudent.CourseRating[SelectedCourse] = (int)vRating;
         }
     }
 }
