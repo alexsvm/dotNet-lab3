@@ -161,5 +161,114 @@ namespace dotNet_lab3
                 }
             }
         }
+
+        private void textBox5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {// Парсим последнюю строку
+                string[] ss;
+
+                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('+');
+                if (ss.Count() > 1)
+                {
+                    try
+                    {
+                        double num1 = Convert.ToDouble(ss[0]);
+                        double num2 = Convert.ToDouble(ss[1]);
+                        textBox5.Text += Environment.NewLine;
+                        textBox5.Text += Convert.ToString(num1 + num2);
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                    catch {
+                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                } // if 
+
+                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('-');
+                if (ss.Count() > 1)
+                {
+                    try
+                    {
+                        double num1 = Convert.ToDouble(ss[0]);
+                        double num2 = Convert.ToDouble(ss[1]);
+                        textBox5.Text += Environment.NewLine;
+                        textBox5.Text += Convert.ToString(num1 - num2);
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                    catch
+                    {
+                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                } // if 
+
+                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('*');
+                if (ss.Count() > 1)
+                {
+                    try
+                    {
+                        double num1 = Convert.ToDouble(ss[0]);
+                        double num2 = Convert.ToDouble(ss[1]);
+                        textBox5.Text += Environment.NewLine;
+                        textBox5.Text += Convert.ToString(num1 * num2);
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                    catch
+                    {
+                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                } // if 
+
+                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('/');
+                if (ss.Count() > 1)
+                {
+                    try
+                    {
+                        double num1 = Convert.ToDouble(ss[0]);
+                        double num2 = Convert.ToDouble(ss[1]);
+                        textBox5.Text += Environment.NewLine;
+                        textBox5.Text += Convert.ToString(num1 / num2);
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                    catch
+                    {
+                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                } // if 
+            }
+        }
+
+        private void textBox5_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Return)
+            {
+                if (textBox5.Lines[textBox5.Lines.Count() - 1] == "")
+                {
+                    textBox5.Text = textBox5.Text.Substring(0, textBox5.Text.Length - 2);
+                    textBox5.SelectionStart = textBox5.Text.Length;
+                }
+            }
+        }
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
