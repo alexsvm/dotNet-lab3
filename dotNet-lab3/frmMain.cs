@@ -93,5 +93,73 @@ namespace dotNet_lab3
             if (vRating != null && SelectedCourse != null && SelectedStudent != null)
                 SelectedStudent.CourseRating[SelectedCourse] = (int)vRating;
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            //textBox1.Text += Environment.NewLine + "Sdas";
+            int i = 1;
+            try
+            {
+                i = Convert.ToInt32(maskedTextBox1.Text);
+            }
+            catch (FormatException E)
+            {
+                textBox1.Text += "Input string is not a sequence of digits." + Environment.NewLine;
+            }
+            catch (OverflowException E)
+            {
+                textBox1.Text += "The number cannot fit in an Int32." + Environment.NewLine;
+            }
+            for (int j = 1; j <= i; j++)
+            {
+                textBox1.Text += j.ToString() + Environment.NewLine;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int j = 1; j <= numericUpDown1.Value; j++)
+            {
+                textBox1.Text += j.ToString() + Environment.NewLine;
+            }
+        }
+
+        private void frmMain_Shown(object sender, EventArgs e)
+        {
+            notifyIcon1.ShowBalloonTip(1);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add(textBox2.Text);
+        }
+
+        private void comboBox1_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            textBox3.Text += comboBox1.Text + Environment.NewLine;
+        }
+
+        private void comboBox2_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            label10.Text = comboBox2.Text;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            comboBox2.Items.Clear();
+            int LinesCount = textBox4.Lines.Count();
+            for (int i = 0; i < LinesCount; i++)
+            {
+                try
+                {
+                    int val = Convert.ToInt32(textBox4.Lines[i]);
+                    comboBox2.Items.Add(textBox4.Lines[i]);
+                }
+                catch
+                {
+
+                }
+            }
+        }
     }
 }

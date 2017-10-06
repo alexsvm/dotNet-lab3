@@ -61,7 +61,7 @@ namespace dotNet_lab3
         }
     }
 
-    public class StudyElective
+    public class Electives
     {
 
     }
@@ -83,10 +83,17 @@ namespace dotNet_lab3
             Course C = new Course("Информатика", 9, 3, 2);
             courses.Add(C);
             Student S = new Student("Иван", "Иванович", "Иванов", "Дефаулт-сити", "3322322");
-            S.CourseRating[C] = 3;
             students.Add(S);
-            
-            
+            S.CourseRating[C] = 3;
+
+            C = new Course("Программирование", 10, 5, 4);
+            courses.Add(C);
+            S = new Student("Петр", "Петрович", "Петров", "Брянскъ", "44444-4444");
+            students.Add(S);
+            S.CourseRating[C] = 5;
+            S.CourseRating[courses[0]] = 4;
+            students[0].CourseRating[C] = 2;
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmMain());
