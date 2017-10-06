@@ -270,5 +270,21 @@ namespace dotNet_lab3
 
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            string ss = "";
+            foreach (string s in textBox6.Lines)
+            {
+                try
+                {
+                    double d = Convert.ToDouble(s);
+                }
+                catch
+                {
+                    ss = s + Environment.NewLine + ss;
+                }
+            } // foreach
+            textBox6.Text = ss;
+        }
     }
 }
