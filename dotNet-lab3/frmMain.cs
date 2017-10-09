@@ -168,45 +168,6 @@ namespace dotNet_lab3
             {// Парсим последнюю строку
                 string[] ss;
 
-                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('+');
-                if (ss.Count() > 1)
-                {
-                    try
-                    {
-                        double num1 = Convert.ToDouble(ss[0]);
-                        double num2 = Convert.ToDouble(ss[1]);
-                        textBox5.Text += Environment.NewLine;
-                        textBox5.Text += Convert.ToString(num1 + num2);
-                        textBox5.SelectionStart = textBox5.Text.Length;
-                        return;
-                    }
-                    catch {
-                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
-                        textBox5.SelectionStart = textBox5.Text.Length;
-                        return;
-                    }
-                } // if 
-
-                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('-');
-                if (ss.Count() > 1)
-                {
-                    try
-                    {
-                        double num1 = Convert.ToDouble(ss[0]);
-                        double num2 = Convert.ToDouble(ss[1]);
-                        textBox5.Text += Environment.NewLine;
-                        textBox5.Text += Convert.ToString(num1 - num2);
-                        textBox5.SelectionStart = textBox5.Text.Length;
-                        return;
-                    }
-                    catch
-                    {
-                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
-                        textBox5.SelectionStart = textBox5.Text.Length;
-                        return;
-                    }
-                } // if 
-
                 ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('*');
                 if (ss.Count() > 1)
                 {
@@ -236,6 +197,50 @@ namespace dotNet_lab3
                         double num2 = Convert.ToDouble(ss[1]);
                         textBox5.Text += Environment.NewLine;
                         textBox5.Text += Convert.ToString(num1 / num2);
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                    catch
+                    {
+                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                } // if
+
+                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('+');
+                if (ss.Count() > 1)
+                {
+                    try
+                    {
+                        double num1 = Convert.ToDouble(ss[0]);
+                        double num2 = Convert.ToDouble(ss[1]);
+                        textBox5.Text += Environment.NewLine;
+                        textBox5.Text += Convert.ToString(num1 + num2);
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                    catch {
+                        textBox5.Text += Environment.NewLine + "Ошибка в выражении!" + Environment.NewLine;
+                        textBox5.SelectionStart = textBox5.Text.Length;
+                        return;
+                    }
+                } // if 
+
+                ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('-');
+                if (ss.Count() > 1)
+                {
+                    try
+                    {
+                        int a, b;
+                        a = (ss[0] == "") ? 1 : 0;
+                        b = (ss[a+1] == "") ? a + 2 : a + 1;
+                        double num1 = (a == 1)? - Convert.ToDouble(ss[a]) : Convert.ToDouble(ss[a]);
+                        double num2 = (b-a) > 1 ? - Convert.ToDouble(ss[b]) : Convert.ToDouble(ss[b]);
+                        //double num1 = ss[0] == "" ? Convert.ToDouble(ss[1]) : Convert.ToDouble(ss[0]);
+                        //double num2 = ss[0] == "" ? Convert.ToDouble(ss[2]) : Convert.ToDouble(ss[1]);
+                        textBox5.Text += Environment.NewLine;
+                        textBox5.Text += Convert.ToString(num1 - num2);
                         textBox5.SelectionStart = textBox5.Text.Length;
                         return;
                     }
