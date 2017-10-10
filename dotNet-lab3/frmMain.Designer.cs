@@ -78,6 +78,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -86,17 +87,24 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.btnCalc = new System.Windows.Forms.Button();
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +118,11 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -584,6 +596,15 @@
             this.tabPage3.Text = "Lab4-2";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(190, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Заполняем Combobox значениями...";
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(21, 141);
@@ -668,6 +689,15 @@
             this.tabPage5.Text = "Lab4-4";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(311, 13);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Если в TextBox\'e есть числа, то они попадают в ComboBox...";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -699,6 +729,12 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnCalc);
+            this.tabPage6.Controls.Add(this.numericUpDown3);
+            this.tabPage6.Controls.Add(this.label17);
+            this.tabPage6.Controls.Add(this.label16);
+            this.tabPage6.Controls.Add(this.numericUpDown2);
+            this.tabPage6.Controls.Add(this.dataGridView1);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(752, 613);
@@ -718,32 +754,23 @@
             this.tabPage7.Text = "Lab4-6";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // tabPage8
+            // button4
             // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(752, 613);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Lab4-7";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(29, 393);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(184, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Реверс...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label13
+            // textBox6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(190, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Заполняем Combobox значениями...";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(311, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Если в TextBox\'e есть числа, то они попадают в ComboBox...";
+            this.textBox6.Location = new System.Drawing.Point(29, 41);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(482, 346);
+            this.textBox6.TabIndex = 1;
             // 
             // label15
             // 
@@ -754,23 +781,100 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Реверсируем строки в TextBox, если это не числа...";
             // 
-            // textBox6
+            // tabPage8
             // 
-            this.textBox6.Location = new System.Drawing.Point(29, 41);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(482, 346);
-            this.textBox6.TabIndex = 1;
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(752, 613);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Lab4-7";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // dataGridView1
             // 
-            this.button4.Location = new System.Drawing.Point(29, 393);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Реверс...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colX,
+            this.colY});
+            this.dataGridView1.Location = new System.Drawing.Point(11, 116);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(289, 396);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // colX
+            // 
+            this.colX.HeaderText = "Аргумент";
+            this.colX.Name = "colX";
+            this.colX.ReadOnly = true;
+            // 
+            // colY
+            // 
+            this.colY.HeaderText = "Значение";
+            this.colY.Name = "colY";
+            this.colY.ReadOnly = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 3;
+            this.numericUpDown2.Location = new System.Drawing.Point(11, 29);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown2.TabIndex = 2;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(17, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "X:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 62);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Точность:";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.DecimalPlaces = 3;
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown3.Location = new System.Drawing.Point(11, 78);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown3.TabIndex = 5;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            196608});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // btnCalc
+            // 
+            this.btnCalc.Location = new System.Drawing.Point(98, 29);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(217, 20);
+            this.btnCalc.TabIndex = 6;
+            this.btnCalc.Text = "button6";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
             // frmMain
             // 
@@ -804,8 +908,13 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -878,6 +987,14 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colY;
+        private System.Windows.Forms.Button btnCalc;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
     }
 }
 

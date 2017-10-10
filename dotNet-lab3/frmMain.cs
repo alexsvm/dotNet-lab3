@@ -277,19 +277,64 @@ namespace dotNet_lab3
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string ss = "";
+            List<string> ls = new List<string>();
+            //string ss = "";
             foreach (string s in textBox6.Lines)
             {
                 try
                 {
                     double d = Convert.ToDouble(s);
+                    ls.Add(s);
                 }
                 catch
                 {
-                    ss = s + Environment.NewLine + ss;
+                    char[] ca = s.ToCharArray();
+                    Array.Reverse(ca);
+                    ls.Add(new string(ca));
                 }
             } // foreach
-            textBox6.Text = ss;
+            textBox6.Text = String.Join(Environment.NewLine, ls.ToArray());
+            //textBox6.Text = ss;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0].Value = "sdxasd";
+            dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[1].Value = "fffffff";
+        }
+
+        private double Func(double X, int N)
+        {
+            return 1 / Math.Pow(X,N);
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            double summ = 0;
+            double summ1 = 0;
+            double accuracy = (double)numericUpDown3.Value;
+            double X = (double)numericUpDown2.Value;
+
+            dataGridView1.Rows.Clear();
+
+            int n = 0;
+            do
+            {
+                summ1 = summ;
+                summ += Func(X, n);
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0].Value = n;
+                dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[1].Value = summ;
+
+                n++;
+            } while (summ - summ1 > accuracy);
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
