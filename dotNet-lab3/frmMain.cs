@@ -319,7 +319,7 @@ namespace dotNet_lab3
 
             dataGridView1.Rows.Clear();
 
-            int n = 0;
+            int n = 1;
             do
             {
                 summ1 = summ;
@@ -335,6 +335,31 @@ namespace dotNet_lab3
         private void numericUpDown3_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private delegate void MyFunc(out double y, double x);
+
+        private void btnTabulate_Click(object sender, EventArgs e)
+        {
+            double LLimit = (double)nudLowerLimit.Value;
+            double ULimit = (double)nudUpperLimit.Value;
+            double Step = (double)nudStep.Value;
+
+            var func = CSCompiler.GetDelegate(typeof(MyFunc), tbStatement.Text) as MyFunc;
+
+            double z;
+            func(out z, 2);
+
+            dataGridView2.Rows.Clear();
+
+            double y;
+            for (double x = LLimit; x <= ULimit; x += Step)
+            {
+                func(out y, x);
+                dataGridView2.Rows.Add();
+                dataGridView2.Rows[dataGridView2.Rows.Count - 1].Cells[0].Value = x;
+                dataGridView2.Rows[dataGridView2.Rows.Count - 1].Cells[1].Value = y;
+            }
         }
     }
 }
