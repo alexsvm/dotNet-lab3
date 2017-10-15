@@ -92,32 +92,32 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnCalc = new System.Windows.Forms.Button();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colY = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.btnCalc = new System.Windows.Forms.Button();
-            this.label18 = new System.Windows.Forms.Label();
-            this.nudLowerLimit = new System.Windows.Forms.NumericUpDown();
-            this.nudUpperLimit = new System.Windows.Forms.NumericUpDown();
-            this.nudStep = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tbStatement = new System.Windows.Forms.TextBox();
+            this.btnTabulate = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnTabulate = new System.Windows.Forms.Button();
-            this.tbStatement = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.nudStep = new System.Windows.Forms.NumericUpDown();
+            this.nudUpperLimit = new System.Windows.Forms.NumericUpDown();
+            this.nudLowerLimit = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -132,15 +132,15 @@
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage7.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLowerLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUpperLimit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUpperLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowerLimit)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -760,6 +760,92 @@
             this.tabPage6.Text = "Lab4-5";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // btnCalc
+            // 
+            this.btnCalc.Location = new System.Drawing.Point(98, 29);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(217, 20);
+            this.btnCalc.TabIndex = 6;
+            this.btnCalc.Text = "1/x^n";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.DecimalPlaces = 3;
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown3.Location = new System.Drawing.Point(11, 78);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown3.TabIndex = 5;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            196608});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 62);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Точность:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(17, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "X:";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 3;
+            this.numericUpDown2.Location = new System.Drawing.Point(11, 29);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown2.TabIndex = 2;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            65536});
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colX,
+            this.colY});
+            this.dataGridView1.Location = new System.Drawing.Point(11, 116);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(289, 396);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // colX
+            // 
+            this.colX.HeaderText = "Аргумент";
+            this.colX.Name = "colX";
+            this.colX.ReadOnly = true;
+            // 
+            // colY
+            // 
+            this.colY.HeaderText = "Значение";
+            this.colY.Name = "colY";
+            this.colY.ReadOnly = true;
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.button4);
@@ -819,165 +905,39 @@
             this.tabPage8.Text = "Lab4-7";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // label22
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colX,
-            this.colY});
-            this.dataGridView1.Location = new System.Drawing.Point(11, 116);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(289, 396);
-            this.dataGridView1.TabIndex = 0;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 101);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(69, 13);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Выражение:";
             // 
-            // colX
+            // tbStatement
             // 
-            this.colX.HeaderText = "Аргумент";
-            this.colX.Name = "colX";
-            this.colX.ReadOnly = true;
+            this.tbStatement.Location = new System.Drawing.Point(18, 117);
+            this.tbStatement.Name = "tbStatement";
+            this.tbStatement.Size = new System.Drawing.Size(358, 20);
+            this.tbStatement.TabIndex = 10;
+            this.tbStatement.Text = "y=Math.Cos(x)";
             // 
-            // colY
+            // btnTabulate
             // 
-            this.colY.HeaderText = "Значение";
-            this.colY.Name = "colY";
-            this.colY.ReadOnly = true;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.DecimalPlaces = 3;
-            this.numericUpDown2.Location = new System.Drawing.Point(11, 29);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(64, 20);
-            this.numericUpDown2.TabIndex = 2;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            65536});
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(17, 13);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "X:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(8, 62);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(57, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Точность:";
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.DecimalPlaces = 3;
-            this.numericUpDown3.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.numericUpDown3.Location = new System.Drawing.Point(11, 78);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
-            this.numericUpDown3.TabIndex = 5;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            196608});
-            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
-            // 
-            // btnCalc
-            // 
-            this.btnCalc.Location = new System.Drawing.Point(98, 29);
-            this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(217, 20);
-            this.btnCalc.TabIndex = 6;
-            this.btnCalc.Text = "1/x^n";
-            this.btnCalc.UseVisualStyleBackColor = true;
-            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(15, 19);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(520, 13);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Табулируем функцию, заданную выражением с синтаксисом C# вида y=f(x), например: y" +
-    "=Math.Cos(x)";
-            // 
-            // nudLowerLimit
-            // 
-            this.nudLowerLimit.Location = new System.Drawing.Point(18, 61);
-            this.nudLowerLimit.Name = "nudLowerLimit";
-            this.nudLowerLimit.Size = new System.Drawing.Size(79, 20);
-            this.nudLowerLimit.TabIndex = 1;
-            // 
-            // nudUpperLimit
-            // 
-            this.nudUpperLimit.Location = new System.Drawing.Point(146, 61);
-            this.nudUpperLimit.Name = "nudUpperLimit";
-            this.nudUpperLimit.Size = new System.Drawing.Size(88, 20);
-            this.nudUpperLimit.TabIndex = 2;
-            this.nudUpperLimit.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            // 
-            // nudStep
-            // 
-            this.nudStep.DecimalPlaces = 3;
-            this.nudStep.Location = new System.Drawing.Point(295, 61);
-            this.nudStep.Name = "nudStep";
-            this.nudStep.Size = new System.Drawing.Size(81, 20);
-            this.nudStep.TabIndex = 3;
-            this.nudStep.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(15, 45);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(89, 13);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "Нижний предел:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(143, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(91, 13);
-            this.label20.TabIndex = 5;
-            this.label20.Text = "Верхний предел:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(292, 48);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(30, 13);
-            this.label21.TabIndex = 6;
-            this.label21.Text = "Шаг:";
+            this.btnTabulate.Location = new System.Drawing.Point(18, 152);
+            this.btnTabulate.Name = "btnTabulate";
+            this.btnTabulate.Size = new System.Drawing.Size(171, 23);
+            this.btnTabulate.TabIndex = 9;
+            this.btnTabulate.Text = "Табулирование функции...";
+            this.btnTabulate.UseVisualStyleBackColor = true;
+            this.btnTabulate.Click += new System.EventHandler(this.btnTabulate_Click);
             // 
             // dataGridView2
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -985,7 +945,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(18, 192);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.Size = new System.Drawing.Size(289, 315);
+            this.dataGridView2.Size = new System.Drawing.Size(289, 413);
             this.dataGridView2.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
@@ -1000,32 +960,74 @@
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // btnTabulate
+            // label21
             // 
-            this.btnTabulate.Location = new System.Drawing.Point(18, 152);
-            this.btnTabulate.Name = "btnTabulate";
-            this.btnTabulate.Size = new System.Drawing.Size(171, 23);
-            this.btnTabulate.TabIndex = 9;
-            this.btnTabulate.Text = "Табулирование функции...";
-            this.btnTabulate.UseVisualStyleBackColor = true;
-            this.btnTabulate.Click += new System.EventHandler(this.btnTabulate_Click);
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(292, 48);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(30, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Шаг:";
             // 
-            // tbStatement
+            // label20
             // 
-            this.tbStatement.Location = new System.Drawing.Point(18, 117);
-            this.tbStatement.Name = "tbStatement";
-            this.tbStatement.Size = new System.Drawing.Size(358, 20);
-            this.tbStatement.TabIndex = 10;
-            this.tbStatement.Text = "y=Math.Cos(x)";
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(143, 48);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Верхний предел:";
             // 
-            // label22
+            // label19
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(15, 101);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(69, 13);
-            this.label22.TabIndex = 11;
-            this.label22.Text = "Выражение:";
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 45);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(89, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Нижний предел:";
+            // 
+            // nudStep
+            // 
+            this.nudStep.DecimalPlaces = 3;
+            this.nudStep.Location = new System.Drawing.Point(295, 61);
+            this.nudStep.Name = "nudStep";
+            this.nudStep.Size = new System.Drawing.Size(81, 20);
+            this.nudStep.TabIndex = 3;
+            this.nudStep.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // nudUpperLimit
+            // 
+            this.nudUpperLimit.Location = new System.Drawing.Point(146, 61);
+            this.nudUpperLimit.Name = "nudUpperLimit";
+            this.nudUpperLimit.Size = new System.Drawing.Size(88, 20);
+            this.nudUpperLimit.TabIndex = 2;
+            this.nudUpperLimit.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // nudLowerLimit
+            // 
+            this.nudLowerLimit.Location = new System.Drawing.Point(18, 61);
+            this.nudLowerLimit.Name = "nudLowerLimit";
+            this.nudLowerLimit.Size = new System.Drawing.Size(79, 20);
+            this.nudLowerLimit.TabIndex = 1;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(520, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Табулируем функцию, заданную выражением с синтаксисом C# вида y=f(x), например: y" +
+    "=Math.Cos(x)";
             // 
             // frmMain
             // 
@@ -1061,17 +1063,17 @@
             this.tabPage5.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLowerLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudUpperLimit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUpperLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowerLimit)).EndInit();
             this.ResumeLayout(false);
 
         }
