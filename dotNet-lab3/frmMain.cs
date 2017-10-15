@@ -206,7 +206,7 @@ namespace dotNet_lab3
                         textBox5.SelectionStart = textBox5.Text.Length;
                         return;
                     }
-                } // if 
+                } // if
 
                 ss = textBox5.Lines[textBox5.Lines.Count() - 1].Split('+');
                 if (ss.Count() > 1)
@@ -232,8 +232,13 @@ namespace dotNet_lab3
                 {
                     try
                     {
-                        double num1 = ss[0] == "" ? Convert.ToDouble(ss[1]) : Convert.ToDouble(ss[0]);
-                        double num2 = ss[0] == "" ? Convert.ToDouble(ss[2]) : Convert.ToDouble(ss[1]);
+                        int a, b;
+                        a = (ss[0] == "") ? 1 : 0;
+                        b = (ss[a+1] == "") ? a + 2 : a + 1;
+                        double num1 = (a == 1)? - Convert.ToDouble(ss[a]) : Convert.ToDouble(ss[a]);
+                        double num2 = (b-a) > 1 ? - Convert.ToDouble(ss[b]) : Convert.ToDouble(ss[b]);
+                        //double num1 = ss[0] == "" ? Convert.ToDouble(ss[1]) : Convert.ToDouble(ss[0]);
+                        //double num2 = ss[0] == "" ? Convert.ToDouble(ss[2]) : Convert.ToDouble(ss[1]);
                         textBox5.Text += Environment.NewLine;
                         textBox5.Text += Convert.ToString(num1 - num2);
                         textBox5.SelectionStart = textBox5.Text.Length;
@@ -272,19 +277,89 @@ namespace dotNet_lab3
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string ss = "";
+            List<string> ls = new List<string>();
+            //string ss = "";
             foreach (string s in textBox6.Lines)
             {
                 try
-                { 
+                {
                     double d = Convert.ToDouble(s);
+                    ls.Add(s);
                 }
                 catch
                 {
-                    ss = s + Environment.NewLine + ss;
+                    char[] ca = s.ToCharArray();
+                    Array.Reverse(ca);
+                    ls.Add(new string(ca));
                 }
             } // foreach
-            textBox6.Text = ss;
+            textBox6.Text = String.Join(Environment.NewLine, ls.ToArray());
+            //textBox6.Text = ss;
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            dataGridView1.Rows.Add();
+            dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0].Value = "sdxasd";
+            dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[1].Value = "fffffff";
+        }
+
+        private double Func(double X, int N)
+        {
+            return 1 / Math.Pow(X,N);
+        }
+
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            double summ = 0;
+            double summ1 = 0;
+            double accuracy = (double)numericUpDown3.Value;
+            double X = (double)numericUpDown2.Value;
+
+            dataGridView1.Rows.Clear();
+
+            int n = 1;
+            do
+            {
+                summ1 = summ;
+                summ += Func(X, n);
+                dataGridView1.Rows.Add();
+                dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[0].Value = n;
+                dataGridView1.Rows[dataGridView1.Rows.Count - 1].Cells[1].Value = summ;
+
+                n++;
+            } while (summ - summ1 > accuracy);
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private delegate void MyFunc(out double y, double x);
+
+        private void btnTabulate_Click(object sender, EventArgs e)
+        {
+            double LLimit = (double)nudLowerLimit.Value;
+            double ULimit = (double)nudUpperLimit.Value;
+            double Step = (double)nudStep.Value;
+
+            var func = CSCompiler.GetDelegate(typeof(MyFunc), tbStatement.Text) as MyFunc;
+
+            double z;
+            func(out z, 2);
+
+            dataGridView2.Rows.Clear();
+
+            double y;
+            for (double x = LLimit; x <= ULimit; x += Step)
+            {
+                func(out y, x);
+                dataGridView2.Rows.Add();
+                dataGridView2.Rows[dataGridView2.Rows.Count - 1].Cells[0].Value = x;
+                dataGridView2.Rows[dataGridView2.Rows.Count - 1].Cells[1].Value = y;
+            }
         }
     }
 }

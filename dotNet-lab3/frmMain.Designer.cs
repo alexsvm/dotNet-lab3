@@ -97,6 +97,27 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.colX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.btnCalc = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.nudLowerLimit = new System.Windows.Forms.NumericUpDown();
+            this.nudUpperLimit = new System.Windows.Forms.NumericUpDown();
+            this.nudStep = new System.Windows.Forms.NumericUpDown();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnTabulate = new System.Windows.Forms.Button();
+            this.tbStatement = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -110,7 +131,16 @@
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowerLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUpperLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStep)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // notifyIcon1
@@ -217,7 +247,7 @@
             // lblStudentRatingInfo
             // 
             this.lblStudentRatingInfo.AutoSize = true;
-            this.lblStudentRatingInfo.Location = new System.Drawing.Point(6, 480);
+            this.lblStudentRatingInfo.Location = new System.Drawing.Point(9, 522);
             this.lblStudentRatingInfo.Name = "lblStudentRatingInfo";
             this.lblStudentRatingInfo.Size = new System.Drawing.Size(194, 13);
             this.lblStudentRatingInfo.TabIndex = 5;
@@ -225,14 +255,14 @@
             // 
             // edStudentCourseRating
             // 
-            this.edStudentCourseRating.Location = new System.Drawing.Point(9, 496);
+            this.edStudentCourseRating.Location = new System.Drawing.Point(12, 538);
             this.edStudentCourseRating.Name = "edStudentCourseRating";
             this.edStudentCourseRating.Size = new System.Drawing.Size(132, 20);
             this.edStudentCourseRating.TabIndex = 6;
             // 
             // btnSaveStudentRating
             // 
-            this.btnSaveStudentRating.Location = new System.Drawing.Point(9, 522);
+            this.btnSaveStudentRating.Location = new System.Drawing.Point(12, 564);
             this.btnSaveStudentRating.Name = "btnSaveStudentRating";
             this.btnSaveStudentRating.Size = new System.Drawing.Size(132, 23);
             this.btnSaveStudentRating.TabIndex = 7;
@@ -256,7 +286,7 @@
             this.groupBox2.Controls.Add(this.listBoxCourses);
             this.groupBox2.Location = new System.Drawing.Point(3, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 194);
+            this.groupBox2.Size = new System.Drawing.Size(741, 229);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Предметы";
@@ -327,7 +357,7 @@
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(9, 156);
+            this.btnAddCourse.Location = new System.Drawing.Point(11, 181);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(112, 23);
             this.btnAddCourse.TabIndex = 1;
@@ -344,7 +374,7 @@
             " "});
             this.listBoxCourses.Location = new System.Drawing.Point(303, 19);
             this.listBoxCourses.Name = "listBoxCourses";
-            this.listBoxCourses.Size = new System.Drawing.Size(432, 160);
+            this.listBoxCourses.Size = new System.Drawing.Size(432, 186);
             this.listBoxCourses.TabIndex = 0;
             this.listBoxCourses.SelectedIndexChanged += new System.EventHandler(this.listBoxCourses_SelectedIndexChanged);
             // 
@@ -365,9 +395,9 @@
             this.groupBox1.Controls.Add(this.textBoxLN);
             this.groupBox1.Controls.Add(this.textBoxMN);
             this.groupBox1.Controls.Add(this.textBoxFN);
-            this.groupBox1.Location = new System.Drawing.Point(0, 206);
+            this.groupBox1.Location = new System.Drawing.Point(6, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 261);
+            this.groupBox1.Size = new System.Drawing.Size(738, 274);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Студенты";
@@ -375,7 +405,7 @@
             // lblStudentInfo
             // 
             this.lblStudentInfo.AutoSize = true;
-            this.lblStudentInfo.Location = new System.Drawing.Point(300, 227);
+            this.lblStudentInfo.Location = new System.Drawing.Point(300, 237);
             this.lblStudentInfo.Name = "lblStudentInfo";
             this.lblStudentInfo.Size = new System.Drawing.Size(31, 13);
             this.lblStudentInfo.TabIndex = 6;
@@ -400,7 +430,7 @@
             ""});
             this.listBoxStudents.Location = new System.Drawing.Point(303, 19);
             this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(429, 173);
+            this.listBoxStudents.Size = new System.Drawing.Size(429, 199);
             this.listBoxStudents.TabIndex = 5;
             this.listBoxStudents.SelectedIndexChanged += new System.EventHandler(this.listBoxStudents_SelectedIndexChanged);
             // 
@@ -458,7 +488,7 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(7, 227);
+            this.btnAddStudent.Location = new System.Drawing.Point(9, 237);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(114, 23);
             this.btnAddStudent.TabIndex = 6;
@@ -527,7 +557,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "go";
+            this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -566,7 +596,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "go";
+            this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -717,6 +747,12 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnCalc);
+            this.tabPage6.Controls.Add(this.numericUpDown3);
+            this.tabPage6.Controls.Add(this.label17);
+            this.tabPage6.Controls.Add(this.label16);
+            this.tabPage6.Controls.Add(this.numericUpDown2);
+            this.tabPage6.Controls.Add(this.dataGridView1);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(752, 613);
@@ -765,12 +801,231 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.label22);
+            this.tabPage8.Controls.Add(this.tbStatement);
+            this.tabPage8.Controls.Add(this.btnTabulate);
+            this.tabPage8.Controls.Add(this.dataGridView2);
+            this.tabPage8.Controls.Add(this.label21);
+            this.tabPage8.Controls.Add(this.label20);
+            this.tabPage8.Controls.Add(this.label19);
+            this.tabPage8.Controls.Add(this.nudStep);
+            this.tabPage8.Controls.Add(this.nudUpperLimit);
+            this.tabPage8.Controls.Add(this.nudLowerLimit);
+            this.tabPage8.Controls.Add(this.label18);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Size = new System.Drawing.Size(752, 613);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "Lab4-7";
             this.tabPage8.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colX,
+            this.colY});
+            this.dataGridView1.Location = new System.Drawing.Point(11, 116);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(289, 396);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // colX
+            // 
+            this.colX.HeaderText = "Аргумент";
+            this.colX.Name = "colX";
+            this.colX.ReadOnly = true;
+            // 
+            // colY
+            // 
+            this.colY.HeaderText = "Значение";
+            this.colY.Name = "colY";
+            this.colY.ReadOnly = true;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.DecimalPlaces = 3;
+            this.numericUpDown2.Location = new System.Drawing.Point(11, 29);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown2.TabIndex = 2;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            65536});
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(8, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(17, 13);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "X:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(8, 62);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(57, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Точность:";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.DecimalPlaces = 3;
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDown3.Location = new System.Drawing.Point(11, 78);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(64, 20);
+            this.numericUpDown3.TabIndex = 5;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            196608});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // btnCalc
+            // 
+            this.btnCalc.Location = new System.Drawing.Point(98, 29);
+            this.btnCalc.Name = "btnCalc";
+            this.btnCalc.Size = new System.Drawing.Size(217, 20);
+            this.btnCalc.TabIndex = 6;
+            this.btnCalc.Text = "1/x^n";
+            this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(15, 19);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(520, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Табулируем функцию, заданную выражением с синтаксисом C# вида y=f(x), например: y" +
+    "=Math.Cos(x)";
+            // 
+            // nudLowerLimit
+            // 
+            this.nudLowerLimit.Location = new System.Drawing.Point(18, 61);
+            this.nudLowerLimit.Name = "nudLowerLimit";
+            this.nudLowerLimit.Size = new System.Drawing.Size(79, 20);
+            this.nudLowerLimit.TabIndex = 1;
+            // 
+            // nudUpperLimit
+            // 
+            this.nudUpperLimit.Location = new System.Drawing.Point(146, 61);
+            this.nudUpperLimit.Name = "nudUpperLimit";
+            this.nudUpperLimit.Size = new System.Drawing.Size(88, 20);
+            this.nudUpperLimit.TabIndex = 2;
+            this.nudUpperLimit.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // nudStep
+            // 
+            this.nudStep.DecimalPlaces = 3;
+            this.nudStep.Location = new System.Drawing.Point(295, 61);
+            this.nudStep.Name = "nudStep";
+            this.nudStep.Size = new System.Drawing.Size(81, 20);
+            this.nudStep.TabIndex = 3;
+            this.nudStep.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(15, 45);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(89, 13);
+            this.label19.TabIndex = 4;
+            this.label19.Text = "Нижний предел:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(143, 48);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(91, 13);
+            this.label20.TabIndex = 5;
+            this.label20.Text = "Верхний предел:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(292, 48);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(30, 13);
+            this.label21.TabIndex = 6;
+            this.label21.Text = "Шаг:";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.AllowUserToDeleteRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridView2.Location = new System.Drawing.Point(18, 192);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.Size = new System.Drawing.Size(289, 315);
+            this.dataGridView2.TabIndex = 7;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Аргумент";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Значение";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // btnTabulate
+            // 
+            this.btnTabulate.Location = new System.Drawing.Point(18, 152);
+            this.btnTabulate.Name = "btnTabulate";
+            this.btnTabulate.Size = new System.Drawing.Size(171, 23);
+            this.btnTabulate.TabIndex = 9;
+            this.btnTabulate.Text = "Табулирование функции...";
+            this.btnTabulate.UseVisualStyleBackColor = true;
+            this.btnTabulate.Click += new System.EventHandler(this.btnTabulate_Click);
+            // 
+            // tbStatement
+            // 
+            this.tbStatement.Location = new System.Drawing.Point(18, 117);
+            this.tbStatement.Name = "tbStatement";
+            this.tbStatement.Size = new System.Drawing.Size(358, 20);
+            this.tbStatement.TabIndex = 10;
+            this.tbStatement.Text = "y=Math.Cos(x)";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(15, 101);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(69, 13);
+            this.label22.TabIndex = 11;
+            this.label22.Text = "Выражение:";
             // 
             // frmMain
             // 
@@ -804,8 +1059,19 @@
             this.tabPage4.PerformLayout();
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLowerLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudUpperLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudStep)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -878,6 +1144,27 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colX;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colY;
+        private System.Windows.Forms.Button btnCalc;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown nudStep;
+        private System.Windows.Forms.NumericUpDown nudUpperLimit;
+        private System.Windows.Forms.NumericUpDown nudLowerLimit;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Button btnTabulate;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox tbStatement;
     }
 }
 
