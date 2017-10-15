@@ -78,6 +78,7 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -86,17 +87,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.contextMenuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -217,7 +217,7 @@
             // lblStudentRatingInfo
             // 
             this.lblStudentRatingInfo.AutoSize = true;
-            this.lblStudentRatingInfo.Location = new System.Drawing.Point(9, 522);
+            this.lblStudentRatingInfo.Location = new System.Drawing.Point(6, 480);
             this.lblStudentRatingInfo.Name = "lblStudentRatingInfo";
             this.lblStudentRatingInfo.Size = new System.Drawing.Size(194, 13);
             this.lblStudentRatingInfo.TabIndex = 5;
@@ -225,14 +225,14 @@
             // 
             // edStudentCourseRating
             // 
-            this.edStudentCourseRating.Location = new System.Drawing.Point(12, 538);
+            this.edStudentCourseRating.Location = new System.Drawing.Point(9, 496);
             this.edStudentCourseRating.Name = "edStudentCourseRating";
             this.edStudentCourseRating.Size = new System.Drawing.Size(132, 20);
             this.edStudentCourseRating.TabIndex = 6;
             // 
             // btnSaveStudentRating
             // 
-            this.btnSaveStudentRating.Location = new System.Drawing.Point(12, 564);
+            this.btnSaveStudentRating.Location = new System.Drawing.Point(9, 522);
             this.btnSaveStudentRating.Name = "btnSaveStudentRating";
             this.btnSaveStudentRating.Size = new System.Drawing.Size(132, 23);
             this.btnSaveStudentRating.TabIndex = 7;
@@ -256,7 +256,7 @@
             this.groupBox2.Controls.Add(this.listBoxCourses);
             this.groupBox2.Location = new System.Drawing.Point(3, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(741, 229);
+            this.groupBox2.Size = new System.Drawing.Size(741, 194);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Предметы";
@@ -327,7 +327,7 @@
             // 
             // btnAddCourse
             // 
-            this.btnAddCourse.Location = new System.Drawing.Point(11, 181);
+            this.btnAddCourse.Location = new System.Drawing.Point(9, 156);
             this.btnAddCourse.Name = "btnAddCourse";
             this.btnAddCourse.Size = new System.Drawing.Size(112, 23);
             this.btnAddCourse.TabIndex = 1;
@@ -344,7 +344,7 @@
             " "});
             this.listBoxCourses.Location = new System.Drawing.Point(303, 19);
             this.listBoxCourses.Name = "listBoxCourses";
-            this.listBoxCourses.Size = new System.Drawing.Size(432, 186);
+            this.listBoxCourses.Size = new System.Drawing.Size(432, 160);
             this.listBoxCourses.TabIndex = 0;
             this.listBoxCourses.SelectedIndexChanged += new System.EventHandler(this.listBoxCourses_SelectedIndexChanged);
             // 
@@ -365,9 +365,9 @@
             this.groupBox1.Controls.Add(this.textBoxLN);
             this.groupBox1.Controls.Add(this.textBoxMN);
             this.groupBox1.Controls.Add(this.textBoxFN);
-            this.groupBox1.Location = new System.Drawing.Point(6, 235);
+            this.groupBox1.Location = new System.Drawing.Point(0, 206);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 274);
+            this.groupBox1.Size = new System.Drawing.Size(738, 261);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Студенты";
@@ -375,7 +375,7 @@
             // lblStudentInfo
             // 
             this.lblStudentInfo.AutoSize = true;
-            this.lblStudentInfo.Location = new System.Drawing.Point(300, 237);
+            this.lblStudentInfo.Location = new System.Drawing.Point(300, 227);
             this.lblStudentInfo.Name = "lblStudentInfo";
             this.lblStudentInfo.Size = new System.Drawing.Size(31, 13);
             this.lblStudentInfo.TabIndex = 6;
@@ -400,7 +400,7 @@
             ""});
             this.listBoxStudents.Location = new System.Drawing.Point(303, 19);
             this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(429, 199);
+            this.listBoxStudents.Size = new System.Drawing.Size(429, 173);
             this.listBoxStudents.TabIndex = 5;
             this.listBoxStudents.SelectedIndexChanged += new System.EventHandler(this.listBoxStudents_SelectedIndexChanged);
             // 
@@ -458,7 +458,7 @@
             // 
             // btnAddStudent
             // 
-            this.btnAddStudent.Location = new System.Drawing.Point(9, 237);
+            this.btnAddStudent.Location = new System.Drawing.Point(7, 227);
             this.btnAddStudent.Name = "btnAddStudent";
             this.btnAddStudent.Size = new System.Drawing.Size(114, 23);
             this.btnAddStudent.TabIndex = 6;
@@ -527,7 +527,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 23);
             this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
+            this.button2.Text = "go";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -566,7 +566,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "go";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -583,6 +583,15 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Lab4-2";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 17);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(190, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Заполняем Combobox значениями...";
             // 
             // textBox3
             // 
@@ -668,6 +677,15 @@
             this.tabPage5.Text = "Lab4-4";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(8, 12);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(311, 13);
+            this.label14.TabIndex = 3;
+            this.label14.Text = "Если в TextBox\'e есть числа, то они попадают в ComboBox...";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -718,32 +736,23 @@
             this.tabPage7.Text = "Lab4-6";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // tabPage8
+            // button4
             // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(752, 613);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "Lab4-7";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(29, 393);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(184, 23);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Реверс...";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // label13
+            // textBox6
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 17);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(190, 13);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Заполняем Combobox значениями...";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 12);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(311, 13);
-            this.label14.TabIndex = 3;
-            this.label14.Text = "Если в TextBox\'e есть числа, то они попадают в ComboBox...";
+            this.textBox6.Location = new System.Drawing.Point(29, 41);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(482, 346);
+            this.textBox6.TabIndex = 1;
             // 
             // label15
             // 
@@ -754,23 +763,14 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "Реверсируем строки в TextBox, если это не числа...";
             // 
-            // textBox6
+            // tabPage8
             // 
-            this.textBox6.Location = new System.Drawing.Point(29, 41);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(482, 346);
-            this.textBox6.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(29, 393);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(184, 23);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Реверс...";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(752, 613);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "Lab4-7";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
