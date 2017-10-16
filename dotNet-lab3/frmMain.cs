@@ -93,5 +93,10 @@ namespace dotNet_lab3
             if (vRating != null && SelectedCourse != null && SelectedStudent != null)
                 SelectedStudent.CourseRating[SelectedCourse] = (int)vRating;
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

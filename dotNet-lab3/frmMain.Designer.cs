@@ -65,6 +65,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lblStudentInfo);
             this.groupBox1.Controls.Add(this.maskedTextBoxPhone);
             this.groupBox1.Controls.Add(this.listBoxStudents);
@@ -80,7 +82,7 @@
             this.groupBox1.Controls.Add(this.textBoxFN);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(757, 274);
+            this.groupBox1.Size = new System.Drawing.Size(575, 274);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Студенты";
@@ -187,7 +189,7 @@
             ""});
             this.listBoxStudents.Location = new System.Drawing.Point(303, 19);
             this.listBoxStudents.Name = "listBoxStudents";
-            this.listBoxStudents.Size = new System.Drawing.Size(448, 199);
+            this.listBoxStudents.Size = new System.Drawing.Size(266, 199);
             this.listBoxStudents.TabIndex = 5;
             this.listBoxStudents.SelectedIndexChanged += new System.EventHandler(this.listBoxStudents_SelectedIndexChanged);
             // 
@@ -202,6 +204,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label7);
@@ -214,19 +218,21 @@
             this.groupBox2.Controls.Add(this.listBoxCourses);
             this.groupBox2.Location = new System.Drawing.Point(12, 292);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(757, 229);
+            this.groupBox2.Size = new System.Drawing.Size(575, 229);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Предметы";
             // 
             // listBoxCourses
             // 
+            this.listBoxCourses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxCourses.FormattingEnabled = true;
             this.listBoxCourses.Items.AddRange(new object[] {
             " "});
             this.listBoxCourses.Location = new System.Drawing.Point(303, 19);
             this.listBoxCourses.Name = "listBoxCourses";
-            this.listBoxCourses.Size = new System.Drawing.Size(448, 186);
+            this.listBoxCourses.Size = new System.Drawing.Size(266, 186);
             this.listBoxCourses.TabIndex = 0;
             this.listBoxCourses.SelectedIndexChanged += new System.EventHandler(this.listBoxCourses_SelectedIndexChanged);
             // 
@@ -309,20 +315,20 @@
             this.lblStudentRatingInfo.AutoSize = true;
             this.lblStudentRatingInfo.Location = new System.Drawing.Point(27, 540);
             this.lblStudentRatingInfo.Name = "lblStudentRatingInfo";
-            this.lblStudentRatingInfo.Size = new System.Drawing.Size(194, 13);
+            this.lblStudentRatingInfo.Size = new System.Drawing.Size(115, 13);
             this.lblStudentRatingInfo.TabIndex = 5;
-            this.lblStudentRatingInfo.Text = "              asdasdasdasdasd                    ";
+            this.lblStudentRatingInfo.Text = "                                    ";
             // 
             // edStudentCourseRating
             // 
-            this.edStudentCourseRating.Location = new System.Drawing.Point(30, 556);
+            this.edStudentCourseRating.Location = new System.Drawing.Point(23, 556);
             this.edStudentCourseRating.Name = "edStudentCourseRating";
             this.edStudentCourseRating.Size = new System.Drawing.Size(132, 20);
             this.edStudentCourseRating.TabIndex = 6;
             // 
             // btnSaveStudentRating
             // 
-            this.btnSaveStudentRating.Location = new System.Drawing.Point(30, 593);
+            this.btnSaveStudentRating.Location = new System.Drawing.Point(23, 592);
             this.btnSaveStudentRating.Name = "btnSaveStudentRating";
             this.btnSaveStudentRating.Size = new System.Drawing.Size(132, 23);
             this.btnSaveStudentRating.TabIndex = 7;
@@ -334,7 +340,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 639);
+            this.ClientSize = new System.Drawing.Size(599, 639);
             this.Controls.Add(this.btnSaveStudentRating);
             this.Controls.Add(this.edStudentCourseRating);
             this.Controls.Add(this.lblStudentRatingInfo);
@@ -343,6 +349,7 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Студенты и все такое...";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
